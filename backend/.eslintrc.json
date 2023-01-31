@@ -1,4 +1,4 @@
-module.exports = {
+{
     "env": {
         "node": true,
         "es2021": true
@@ -7,7 +7,8 @@ module.exports = {
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
-    "overrides": [],
+    "overrides": [
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -16,5 +17,10 @@ module.exports = {
     "plugins": [
         "@typescript-eslint"
     ],
-    "rules": {}
+    "rules": {
+        "semi": ["error", "always", { "omitLastInOneLineBlock": false}],
+        "semi-style": ["error", "last"],
+        "no-extra-semi": ["error"],
+        "semi-spacing": ["error", { "before": false, "after": true }]
+    }
 }
